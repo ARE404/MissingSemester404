@@ -68,7 +68,7 @@ polo(){
    cd "$(cat ~/savepath)" || return 2 #quote to prevent word splitting
 }
 #3
-##failed version1, terminal crashes every time
+##failed version1, terminal crashes every time, didn't work
 #!/bin/env bash
 times=0
 while 1
@@ -82,3 +82,5 @@ do
         exit 1    
     fi
 done
+#4 
+find . -name "*.html" -print0 | xargs -0 tar -czf target.tar
